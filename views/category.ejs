@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= resturantObject.name%></title>
+</head>
+<%- include('./partials/nav.js') %>
+
+<body style="color: black;">
+  <h1>Home Page</h1>
+  <ul>
+<li><%= resturantObject.name%></li>
+<li><%= resturantObject.address%></li>
+<li><%= resturantObject.phone%></li>
+
+  </ul>
+</body>
+</html>
