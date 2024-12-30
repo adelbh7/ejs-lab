@@ -8,7 +8,7 @@
 <%- include('./partials/nav.js') %>
 
 <body style="color: black;">
-  <h1>Selected Menu Items for <%=Category%> Category</h1>
+  <h1><%=category%></h1>
   <ul>
     <% menuItem.forEach((eachItem)=>{%>
       <li>name: <%= eachItem.name%> Price: <%= eachItem.price%> Rating: <%= eachItem.rating%> Details: <%= eachItem.details%></li>
