@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= resturantObject.name%></title>
+  <title><%=category%></title>
 </head>
 <%- include('./partials/nav.js') %>
 
 <body style="color: black;">
-  <h1>Home Page</h1>
+  <h1>Selected Menu Items for <%=Category%> Category</h1>
   <ul>
-<li><%= resturantObject.name%></li>
-<li><%= resturantObject.address%></li>
-<li><%= resturantObject.phone%></li>
+    <% menuItem.forEach((eachItem)=>{%>
+      <li>name: <%= eachItem.name%> Price: <%= eachItem.price%> Rating: <%= eachItem.rating%> Details: <%= eachItem.details%></li>
+   <% }) %>
+
 
   </ul>
 </body>

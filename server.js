@@ -62,6 +62,12 @@ app.get (`/menu`,(req,res) =>{
 })
 
 app.get(`/menu/:category`,(req,res) =>{
-    res.render(`/menu/:category`,{menuItems:RESTAURANT.menu})
+  const selectedCategory = req.params.category
+  const filteredMenu = RESTAURANT.menu.filter((eachItem)=>{
+    eachItem.category==selectedCategory
+  })
+    res.render(`category.ejs`,{menuItems:filteredMenu.menu},{Category:selectedCategory})
+    
 })
+
 app.listen(3001);
